@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "outfit";
+}
+
+:root {
+  --Blue1: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Blue2: hsl(217, 54%, 11%);
+  --Blue3: hsl(216, 50%, 16%);
+  --Blue4: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background: var(--Blue2);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--Blue3);
+  flex-direction: column;
+  max-width: 20.875rem;
+  padding: 1.6rem;
+  border-radius: 0.9rem;
+  width: 90%;
+  margin: 1.5rem;
+}
+
+.image-div {
+  position: relative;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.image-div img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.6rem;
+}
+
+.text-div {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.price-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.foot-div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.foot-div img {
+  width: 2.0625rem;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+
+.ethereum-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--Cyan);
+}
+
+.clock-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--Blue1);
+  opacity: 0.7;
+}
+
+h1 {
+  color: var(--White);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.first-p {
+  color: var(--Blue1);
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+  font-size: 1.0625rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--Blue4);
+  margin: 1rem 0;
+}
+
+.span1 {
+  color: var(--Blue1);
+  opacity: 0.7;
+}
+
+.span2 {
+  color: var(--White);
+  transition: 0.3s;
+}
+
+h1:hover, h1:active, .span2:hover, .span2:active{
+  cursor: pointer;
+  color: var(--Cyan);
+}
+
+.image-div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  background-image: url("images/icon-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-div:hover::after, .image-div:active::after {
+  opacity: 0.8;
+}
